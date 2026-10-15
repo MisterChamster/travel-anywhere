@@ -1,0 +1,48 @@
+Przypadki Testowe Klas równoważności klas (przypadki negatywne):
+
+- Tytuł: Wyszukiwanie bez logowania
+- identyfikator testu: wyszukiwanie_bez_logowania_0
+- warunki wejściowe: uruchom aplikacje
+- kroki testowe:
+  - jeśli urzytkownik jest zalogowany kliknij "Log Out"
+  - przejdź do zakładki mapy
+  - Ustaw filtry na hotel
+  - kliknij na zamek Królewski na Wawelu
+- oczekiwany rezultat
+  - Błąd: Failed to fetch locations. You may not be logged in.
+- warunki wyjściowe
+  - ponowne wyłączenie restrykcji filtrowania
+
+- Tytół: wyszukiwanie na pustkowiu
+- identyfikator testu: wyszukiwanie_na_pustkowiu_0
+- warunki wejściowe:
+  - uruchom aplikacje
+  - zaloguj sie podajac tocken
+- kroki testowe:
+  - przejdź do zakładki mapy
+  - Ustaw filtry na hotel
+  - Kliknij na środku morza Bałtyckiego daleko od lądu
+- oczekiwany rezultat:
+  - wyświetlenie komunikatu "No results found. Click on map to select different location."
+- warunki wyjściowe
+  - ponowne wyłączenie restrykcji filtrowania
+  - wyloguj się
+
+- Tytół: wyszukiwanie z pełnym odfiltrowaniem wyników
+- identyfikator testu: wyszukiwanie_nieaktywne_filtry_0
+- warunki wejściowe:
+  - uruchom aplikacje
+  - zaloguj sie podajac tocken
+- kroki testowe:
+  - przejdź do zakładki mapy
+  - Ustaw wszystkie filtry na odznaczone
+  - kliknij na zamek Królewski na Wawelu
+- oczekiwany rezultat:
+  - Nie wyświetli się żaden komunikat, ani wynik wyszukiwania
+- warunki wyjściowe
+  - ponowne wyłączenie restrykcji filtrowania
+  - wyloguj się
+
+
+
+
