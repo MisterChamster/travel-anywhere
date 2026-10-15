@@ -13,7 +13,7 @@ Przypadki Testowe Klas równoważności klas (przypadki negatywne):
 - warunki wyjściowe
   - ponowne wyłączenie restrykcji filtrowania
 
-- Tytół: wyszukiwanie na pustkowiu
+- Tytuł: wyszukiwanie na pustkowiu
 - identyfikator testu: wyszukiwanie_na_pustkowiu_0
 - warunki wejściowe:
   - uruchom aplikacje
@@ -28,7 +28,7 @@ Przypadki Testowe Klas równoważności klas (przypadki negatywne):
   - ponowne wyłączenie restrykcji filtrowania
   - wyloguj się
 
-- Tytół: wyszukiwanie z pełnym odfiltrowaniem wyników
+- Tytuł: wyszukiwanie z pełnym odfiltrowaniem wyników
 - identyfikator testu: wyszukiwanie_nieaktywne_filtry_0
 - warunki wejściowe:
   - uruchom aplikacje
@@ -42,6 +42,36 @@ Przypadki Testowe Klas równoważności klas (przypadki negatywne):
 - warunki wyjściowe
   - ponowne wyłączenie restrykcji filtrowania
   - wyloguj się
+
+
+- id: search_hotel_low_density
+- name: Search hotels with low hotel density place
+- inputs: Open app, log in using token
+- testing steps:
+ - Log in using token
+ - Uncheck options besides hotel
+ - Click Hofsjokull lake in Iceland
+- expected result: A complete list of hotels in radius of 30 km appears on the right pane
+
+
+- id: search_hotel_high_density
+- name: Search hotels with high hotel density place
+- inputs: Open app, log in using token
+- testing steps:
+ - Uncheck options besides hotel
+ - Click centre of Warszawa
+- expected result: A complete list of hotels in radius of 30 km appears on the right pane
+
+
+- id: belarus_border_comparison
+- name: Check if hotels in Belarus are found as well as somewhere else
+- inputs: Open app, log in using token
+- testing steps:
+ - Uncheck options besides hotel
+ - Click on Poland/Lithuania/Belarus border point
+- expected result: A complete list of hotels in all three countries in radius of 30 km appears on the right pane
+
+
 
 
 
