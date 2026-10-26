@@ -1,49 +1,50 @@
-Przypadki Testowe Klas równoważności klas (przypadki negatywne):
+Equivalence Class Test Cases (negative cases):
+- Title: Search without logging in
+- test ID: search_without_logging_in_0
+- preconditions: launch the application
+- test steps:
+  - if the user is logged in, click "Log Out"
+  - navigate to the map tab
+  - Set the filters to hotel
+  - click on the Wawel Royal Castle
+- expected result:
+  - Error message "Failed to fetch locations. You may not be logged in."
+- postconditions:
+  - disable filtering restrictions again
 
-- Tytuł: Wyszukiwanie bez logowania
-- identyfikator testu: wyszukiwanie_bez_logowania_0
-- warunki wejściowe: uruchom aplikacje
-- kroki testowe:
-  - jeśli urzytkownik jest zalogowany kliknij "Log Out"
-  - przejdź do zakładki mapy
-  - Ustaw filtry na hotel
-  - kliknij na zamek Królewski na Wawelu
-- oczekiwany rezultat
-  - Błąd: Failed to fetch locations. You may not be logged in.
-- warunki wyjściowe
-  - ponowne wyłączenie restrykcji filtrowania
+- Title: Searching in a remote area
+- test ID: search_in_remote_area_0
+- preconditions:
+  - launch the application
+  - log in by providing a token
+- test steps:
+  - navigate to the map tab
+  - Set the filters to hotel
+  - Click in the middle of the Baltic Sea, far from land
+- expected result:
+  - Error message "No results found. Click on map to select different location."
+- postconditions
+  - disable filtering restrictions again
+  - log out
 
-- Tytuł: wyszukiwanie na pustkowiu
-- identyfikator testu: wyszukiwanie_na_pustkowiu_0
-- warunki wejściowe:
-  - uruchom aplikacje
-  - zaloguj sie podajac tocken
-- kroki testowe:
-  - przejdź do zakładki mapy
-  - Ustaw filtry na hotel
-  - Kliknij na środku morza Bałtyckiego daleko od lądu
-- oczekiwany rezultat:
-  - wyświetlenie komunikatu "No results found. Click on map to select different location."
-- warunki wyjściowe
-  - ponowne wyłączenie restrykcji filtrowania
-  - wyloguj się
-
-- Tytuł: wyszukiwanie z pełnym odfiltrowaniem wyników
-- identyfikator testu: wyszukiwanie_nieaktywne_filtry_0
-- warunki wejściowe:
-  - uruchom aplikacje
-  - zaloguj sie podajac tocken
-- kroki testowe:
-  - przejdź do zakładki mapy
-  - Ustaw wszystkie filtry na odznaczone
-  - kliknij na zamek Królewski na Wawelu
-- oczekiwany rezultat:
-  - Nie wyświetli się żaden komunikat, ani wynik wyszukiwania
-- warunki wyjściowe
-  - ponowne wyłączenie restrykcji filtrowania
-  - wyloguj się
+- Title: Search with all results filtered out
+- test ID: search_with_inactive_filters_0
+- preconditions:
+  - launch the application
+  - log in by providing a token
+- test steps:
+  - navigate to the map tab
+  - Set all filters to unchecked
+  - click on the Wawel Royal Castle
+- expected result:
+  - No message or search results will be displayed
+- postconditions
+  - disable filtering restrictions again
+  - log out
 
 
+Equivalence Class Test Cases (positive cases):
+- Title: Low hotel density area sherch
 - id: search_hotel_low_density
 - name: Search hotels with low hotel density place
 - inputs: Open app, log in using token
@@ -53,7 +54,7 @@ Przypadki Testowe Klas równoważności klas (przypadki negatywne):
  - Click Hofsjokull lake in Iceland
 - expected result: A complete list of hotels in radius of 30 km appears on the right pane
 
-
+- Title: High hotel density area sherch
 - id: search_hotel_high_density
 - name: Search hotels with high hotel density place
 - inputs: Open app, log in using token
@@ -62,7 +63,7 @@ Przypadki Testowe Klas równoważności klas (przypadki negatywne):
  - Click centre of Warszawa
 - expected result: A complete list of hotels in radius of 30 km appears on the right pane
 
-
+- Title: Low hotel density area sherch in Belarus
 - id: belarus_border_comparison
 - name: Check if hotels in Belarus are found as well as somewhere else
 - inputs: Open app, log in using token
