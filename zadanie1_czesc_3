@@ -1,0 +1,247 @@
+Decision Table Test Cases (considering infrastructure):
+  - Title: Search with no airports and no car rentals
+  - test ID: search_no_airports_no_rentals
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location with no airports or car rentals within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - set the filters to airports and car rentals
+      - click on the selected location
+  - expected result:
+      - empty list is displayed
+  - postconditions:
+      - disable filtering restrictions
+      - log out
+
+  - Title: Search with no airports and one car rental
+  - test ID: search_no_airports_one_rental
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location with one car rental and no airports within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - set the filters to airports and car rentals
+      - click on the selected location
+  - expected result:
+      - list contains only the car rental
+  - postconditions:
+      - disable filtering restrictions
+      - log out
+
+  - Title: Search with no airports and multiple car rentals
+  - test ID: search_no_airports_multiple_rentals
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location with multiple car rentals and no airports within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - set the filters to airports and car rentals
+      - click on the selected location
+  - expected result:
+      - list contains only car rentals, including all matching locations within the search radius
+  - postconditions:
+      - disable filtering restrictions
+      - log out
+
+  - Title: Search with one airport and no car rentals
+  - test ID: search_one_airport_no_rentals
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location with one airport and no car rentals within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - set the filters to airports and car rentals
+      - click on the selected location
+  - expected result:
+      - list contains only the airport
+  - postconditions:
+      - disable filtering restrictions
+      - log out
+
+  - Title: Search with one airport and one car rental
+  - test ID: search_one_airport_one_rental
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location with one airport and one car rental within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - set the filters to airports and car rentals
+      - click on the selected location
+  - expected result:
+      - list contains one airport and one car rental
+  - postconditions:
+      - disable filtering restrictions
+      - log out
+
+  - Title: Search with one airport and multiple car rentals
+  - test ID: search_one_airport_multiple_rentals
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location with one airport and multiple car rentals within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - set the filters to airports and car rentals
+      - click on the selected location
+  - expected result:
+      - list contains one airport and all matching car rentals within the search radius
+  - postconditions:
+      - disable filtering restrictions
+      - log out
+
+  - Title: Search with multiple airports and multiple car rentals
+  - test ID: search_multiple_airports_multiple_rentals
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location with multiple airports and multiple car rentals within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - set the filters to airports and car rentals
+      - click on the selected location
+  - expected result:
+      - list contains all matching airports and car rentals within the search radius
+  - postconditions:
+      - disable filtering restrictions
+      - log out
+
+Decision Table Test Cases (considering filters):
+  - Title: Search with all filters disabled
+  - test ID: search_all_filters_disabled
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - disable all filters
+      - click on the selected location
+  - expected result:
+      - No search results are displayed
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+  - Title: Search with only hotel filter enabled
+  - test ID: search_hotels_only
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - enable the hotel filter
+      - disable the airport and car rental filters
+      - click on the selected location
+  - expected result:
+      - The list contains only hotels within the search radius
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+  - Title: Search with only airport filter enabled
+  - test ID: search_airports_only
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - enable the airport filter
+      - disable the hotel and car rental filters
+      - click on the selected location
+  - expected result:
+      - The list contains only airports within the search radius
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+  - Title: Search with only car rental filter enabled
+  - test ID: search_car_rentals_only
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - enable the car rental filter
+      - disable the hotel and airport filters
+      - click on the selected location
+  - expected result:
+      - The list contains only car rentals within the search radius
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+  - Title: Search with hotel and airport filters enabled
+  - test ID: search_hotels_and_airports
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - enable the hotel and airport filters
+      - disable the car rental filter
+      - click on the selected location
+  - expected result:
+      - The list contains only hotels and airports within the search radius
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+  - Title: Search with hotel and car rental filters enabled
+  - test ID: search_hotels_and_car_rentals
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - enable the hotel and car rental filters
+      - disable the airport filter
+      - click on the selected location
+  - expected result:
+      - The list contains only hotels and car rentals within the search radius
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+  - Title: Search with airport and car rental filters enabled
+  - test ID: search_airports_and_car_rentals
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - enable the airport and car rental filters
+      - disable the hotel filter
+      - click on the selected location
+  - expected result:
+      - The list contains only airports and car rentals within the search radius
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+  - Title: Search with all filters enabled
+  - test ID: search_all_filters_enabled
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+      - select a location in Warsaw where all three infrastructure types are available within a 30 km radius
+  - test steps:
+      - navigate to the map tab
+      - enable all filters
+      - click on the selected location
+  - expected result:
+      - The list contains hotels, airports, and car rentals within the search radius
+  - postconditions:
+      - restore the default filter settings
+      - log out
