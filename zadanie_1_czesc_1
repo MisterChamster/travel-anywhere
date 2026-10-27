@@ -8,7 +8,7 @@ Equivalence Class Test Cases (negative cases):
   - Set the filters to hotel
   - click on the Wawel Royal Castle
 - expected result:
-  - Error message "Failed to fetch locations. You may not be logged in."
+  - error message "Failed to fetch locations. You may not be logged in."
 - postconditions:
   - disable filtering restrictions again
 
@@ -19,11 +19,11 @@ Equivalence Class Test Cases (negative cases):
   - log in by providing a token
 - test steps:
   - navigate to the map tab
-  - Set the filters to hotel
-  - Click in the middle of the Baltic Sea, far from land
+  - set the filters to hotel
+  - click in the middle of the Baltic Sea, far from land
 - expected result:
-  - Error message "No results found. Click on map to select different location."
-- postconditions
+  - error message "No results found. Click on map to select different location."
+- postconditions:
   - disable filtering restrictions again
   - log out
 
@@ -34,11 +34,11 @@ Equivalence Class Test Cases (negative cases):
   - log in by providing a token
 - test steps:
   - navigate to the map tab
-  - Set all filters to unchecked
+  - set all filters to unchecked
   - click on the Wawel Royal Castle
 - expected result:
-  - No message or search results will be displayed
-- postconditions
+  - no message or search results will be displayed
+- postconditions:
   - disable filtering restrictions again
   - log out
 
@@ -46,34 +46,38 @@ Equivalence Class Test Cases (negative cases):
 Equivalence Class Test Cases (positive cases):
 - Title: Low hotel density area sherch
 - id: search_hotel_low_density
-- name: Search hotels with low hotel density place
-- inputs: Open app, log in using token
+- name: search hotels with low hotel density place
+- inputs: open app, log in using token
 - testing steps:
- - Log in using token
- - Uncheck options besides hotel
- - Click Hofsjokull lake in Iceland
+ - log in using token
+ - uncheck options besides hotel
+ - click Hofsjokull lake in Iceland
 - expected result: A complete list of hotels in radius of 30 km appears on the right pane
+- postconditions:
+  - disable filtering restrictions again
+  - log out
 
 - Title: High hotel density area sherch
 - id: search_hotel_high_density
-- name: Search hotels with high hotel density place
-- inputs: Open app, log in using token
+- name: search hotels with high hotel density place
+- inputs: open app, log in using token
 - testing steps:
- - Uncheck options besides hotel
- - Click centre of Warszawa
-- expected result: A complete list of hotels in radius of 30 km appears on the right pane
+ - uncheck options besides hotel
+ - click centre of Warszawa
+- expected result: complete list of hotels in radius of 30 km appears on the right pane
+- postconditions:
+  - disable filtering restrictions again
+  - log out
 
 - Title: Low hotel density area sherch in Belarus
 - id: belarus_border_comparison
-- name: Check if hotels in Belarus are found as well as somewhere else
-- inputs: Open app, log in using token
+- name: check if hotels in Belarus are found as well as somewhere else
+- inputs: open app, log in using token
 - testing steps:
- - Uncheck options besides hotel
- - Click on Poland/Lithuania/Belarus border point
-- expected result: A complete list of hotels in all three countries in radius of 30 km appears on the right pane
-
-
-
-
-
+ - uncheck options besides hotel
+ - click on Poland/Lithuania/Belarus border point
+- expected result: complete list of hotels in all three countries in radius of 30 km appears on the right pane
+- postconditions:
+  - disable filtering restrictions again
+  - log out
 
