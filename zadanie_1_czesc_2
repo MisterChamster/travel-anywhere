@@ -1,5 +1,5 @@
 Boundary Value Analysis:
-  - Title: Test sherch radius length
+  - Title: Test search radius length
   - test ID: search_radius_length
   - preconditions:
       - launch the application
@@ -7,15 +7,15 @@ Boundary Value Analysis:
   - test steps:
       - navigate to the map tab
       - set the filters to hotel
-      - click on hel in Poland
-      - steadily click further from the shore until the last hotel disappears from list, record it distance from selected point
+      - click on Hel in Poland
+      - steadily click further from the shore until the last hotel disappears from list, record its distance from selected point
   - expected result:
-      - recorded distance to furdest hotel should not exide 30 km
+      - recorded distance to furthest hotel should not exceed 30 km
   - postconditions:
       - disable filtering restrictions again
       - log out
 
-  - Title: Test sherch radius length near equator in north direction
+  - Title: Test search radius length near equator in north direction
   - test ID: search_radius_length_near_equator_n
   - preconditions:
       - launch the application
@@ -24,14 +24,14 @@ Boundary Value Analysis:
       - navigate to the map tab
       - set the filters to hotel
       - find hotel near equator and click on its location
-      - steadily click further from it in north direction, until hotel disappears from list, record it distance from selected point
+      - steadily click further from it in north direction, until hotel disappears from list, record its distance from selected point
   - expected result:
-      - recorded distance to furdest hotel should not exide 30 km
+      - recorded distance to furdest hotel should not exceed 30 km
   - postconditions:
       - disable filtering restrictions again
       - log out
 
-  - Title: Test sherch radius length near equator in east direction
+  - Title: Test search radius length near equator in east direction
   - test ID: search_radius_length_near_equator_e
   - preconditions:
       - launch the application
@@ -40,14 +40,14 @@ Boundary Value Analysis:
       - navigate to the map tab
       - set the filters to hotel
       - find hotel near equator and click on its location
-      - steadily click further from it in east direction, until hotel disappears from list, record it distance from selected point
+      - steadily click further from it in east direction, until hotel disappears from list, record its distance from selected point
   - expected result:
-      - recorded distance to furdest hotel should not exide 30 km
+      - recorded distance to furdest hotel should not exceed 30 km
   - postconditions:
       - disable filtering restrictions again
       - log out
 
-  - Title: Test sherch radius length near scandinavia in north direction
+  - Title: Test search radius length near scandinavia in north direction
   - test ID: search_radius_length_near_scandinavia_n
   - preconditions:
       - launch the application
@@ -56,14 +56,14 @@ Boundary Value Analysis:
       - navigate to the map tab
       - set the filters to hotel
       - find hotel near north end of scandinavia and click on its location
-      - steadily click further from it in north direction, until hotel disappears from list, record it distance from selected point
+      - steadily click further from it in north direction, until hotel disappears from list, record its distance from selected point
   - expected result:
-      - recorded distance to furdest hotel should not exide 30 km
+      - recorded distance to furdest hotel should not exceed 30 km
   - postconditions:
       - disable filtering restrictions again
       - log out
 
-  - Title: Test sherch radius length near scandinavia in east direction
+  - Title: Test search radius length near scandinavia in east direction
   - test ID: search_radius_length_near_scandinavia_e
   - preconditions:
       - launch the application
@@ -72,9 +72,9 @@ Boundary Value Analysis:
       - navigate to the map tab
       - set the filters to hotel
       - find hotel near north end of scandinavia and click on its location
-      - steadily click further from it in east direction, until hotel disappears from list, record it distance from selected point
+      - steadily click further from it in east direction, until hotel disappears from list, record its distance from selected point
   - expected result:
-      - recorded distance to furdest hotel should not exide 30 km
+      - recorded distance to furdest hotel should not exceed 30 km
   - postconditions:
       - disable filtering restrictions again
       - log out
