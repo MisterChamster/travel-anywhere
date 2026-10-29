@@ -1,0 +1,48 @@
+Most importanat reqirementrs:
+Log in -> filer -> search -> search somewhere else
+Log in -> fail to find results
+Not log in -> fail to get results
+
+- Title: General search redo test
+  - test ID: general_search_redo
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+  - test steps:
+      - navigate to the map tab
+      - set the filters to hotel
+      - click on the location (bigger city)
+      - click on the different location (also bigger city)
+  - expected result:
+      - hotels in the area are shown on the second try
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+- Title: General no results test
+  - test ID: general_no_results
+  - preconditions:
+      - launch the application
+      - log in by providing a token
+  - test steps:
+      - navigate to the map tab
+      - disable all filters
+      - click in the middle of the ocean
+  - expected result:
+      - message "No results found. Click on map to select different location." is displayed.
+  - postconditions:
+      - restore the default filter settings
+      - log out
+
+- Title: General not logged fail
+  - test ID: general_not_logged_fail
+  - preconditions:
+      - launch the application
+  - test steps:
+      - navigate to the map tab
+      - disable all filters
+      - click anywhere on the map
+  - expected result:
+      - message "Failed to fetch locations. You may not be logged in." is displayed
+  - postconditions:
+      - restore the default filter settings
